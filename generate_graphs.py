@@ -12,7 +12,6 @@ def run_problem1():
     scores = []
     lengths = []
     
-    # Parse Scenario 2 output
     # Format: Penalty | Max Score | Match Length
     lines = output.split('\n')
     start_parsing = False

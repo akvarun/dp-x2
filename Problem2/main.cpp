@@ -20,9 +20,6 @@ Result solve(const vector<vector<uint8_t>>& matrix) {
     if (m == 0) return {0, -1, -1};
     int n = matrix[0].size();
     
-    // DP table
-    // Using int to ensure we can handle sizes > 255
-    // Although the prompt hints at using a byte, 1000x1000 can have size 1000.
     vector<vector<int>> dp(m, vector<int>(n, 0));
     
     int maxSize = 0;
@@ -70,10 +67,6 @@ vector<vector<uint8_t>> generateMatrix(int rows, int cols) {
 int main() {
     // Verification with small manual example
     cout << "--- Verification Example ---" << endl;
-    // 0 1 1
-    // 0 0 0
-    // 0 0 0
-    // 1 0 0
     vector<vector<uint8_t>> exMat = {
         {0, 1, 1},
         {0, 0, 0},
